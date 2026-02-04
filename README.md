@@ -25,7 +25,7 @@ No backend or database is used.
 
 ## Screenshots
 
-![Home Screen](screenshots/homescreen.png)
+<img src="screenshots/homescreen.png" width="300" />
 
 
 ---
