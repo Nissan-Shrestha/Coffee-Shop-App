@@ -1,16 +1,81 @@
-# coffee_shop_app
+# Coffee Shop App (Flutter UI)
 
-A new Flutter project.
+A simple Coffee Shop mobile app UI built using Flutter.
+
+This project focuses only on the user interface.  
+No backend or database is used.
+
+---
+
+## Features
+
+- Modern coffee shop UI
+- Scrollable home screen
+- Category selection (All, Latte, Americano, Macchiato, Cappuccino)
+- Grid view updates based on selected category
+- Coffee cards display:
+  - Image
+  - Name
+  - Subtitle
+  - Price (formatted to 2 decimals)
+  - Rating
+- Search bar and filter button (UI only)
+
+---
+
+## Screenshots
+
+![Home Screen](screenshots/homescreen.png)
+
+
+---
+
+## Tech Stack
+
+- Flutter
+- Dart
+- Google Fonts (Sora)
+
+---
+
+## Project Structure
+
+```
+lib/
+├── models/
+│   └── coffee.dart
+├── screens/
+│   └── home_screen.dart
+└── main.dart
+```
+
+---
+
+## Notes
+
+- UI-only implementation
+- No backend, API, or database
+- Coffee data is hardcoded
+- Category-based filtering is handled on the UI
+
+---
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+1. Clone the repository
+2. Run `flutter pub get`
+3. Add required assets in `pubspec.yaml`
+4. Run the app using `flutter run`
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Future Improvements
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Search functionality
+- Coffee detail screen
+- Cart and checkout
+- Backend integration
+
+---
+
+Built using Flutter

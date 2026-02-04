@@ -275,7 +275,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             Row(
                               children: [
                                 Text(
-                                  "${filteredCoffees[index].price.toString()} \$",
+                                  "${filteredCoffees[index].price.toStringAsFixed(2)} \$",
                                   style: TextStyle(fontWeight: FontWeight.bold),
                                 ),
                                 const SizedBox(width: 12),
