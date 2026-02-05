@@ -22,19 +22,7 @@ The app uses a bottom navigation screen to switch between main sections.
 - Dart
 - Google Fonts (Sora)
 
-## Project Structure
 
-lib/
-├── models/
-│   └── coffee.dart
-├── screens/
-│   ├── navigation/
-│   │   └── nav_screen.dart
-│   ├── home/
-│   │   └── home_screen.dart
-│   └── coffee/
-│       └── coffee_detail_screen.dart
-└── main.dart
 
 ## Screenshots
 
@@ -45,9 +33,6 @@ lib/
 </p>
 
 
-screenshots/
-├── home_screen.png
-└── detail_screen.png
 
 ## Getting Started
 
