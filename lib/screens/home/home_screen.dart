@@ -1,4 +1,5 @@
 import 'package:coffee_shop_app/models/coffee.dart';
+import 'package:coffee_shop_app/screens/coffee/coffee_detail_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -216,85 +217,102 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
 
                     itemBuilder: (context, index) {
-                      return Container(
-                        padding: const EdgeInsets.all(12),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(14),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black.withOpacity(0.05),
-                              blurRadius: 10,
-                              offset: const Offset(0, 5),
+                      return GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) => CoffeeDetailScreen(
+                                coffee: filteredCoffees[index],
+                              ),
                             ),
-                          ],
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            // Icon placeholder
-                            Container(
-                              height: 150,
+                          );
+                        },
+                        child: Container(
+                          padding: const EdgeInsets.all(12),
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(14),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black.withOpacity(0.05),
+                                blurRadius: 10,
+                                offset: const Offset(0, 5),
+                              ),
+                            ],
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              // Icon placeholder
+                              Container(
+                                height: 150,
 
-                              decoration: BoxDecoration(
-                                color: const Color(0xffF2F2F2),
-                                borderRadius: BorderRadius.circular(12),
-                                image: DecorationImage(
-                                  fit: BoxFit.cover,
-                                  image: AssetImage(
-                                    filteredCoffees[index].image,
+                                decoration: BoxDecoration(
+                                  color: const Color(0xffF2F2F2),
+                                  borderRadius: BorderRadius.circular(12),
+                                  image: DecorationImage(
+                                    fit: BoxFit.cover,
+                                    image: AssetImage(
+                                      filteredCoffees[index].image,
+                                    ),
                                   ),
                                 ),
                               ),
-                            ),
 
-                            const SizedBox(height: 10),
+                              const SizedBox(height: 10),
 
-                            Text(
-                              filteredCoffees[index].name,
-                              maxLines: 1,
-                              overflow: TextOverflow.ellipsis,
-                              style: TextStyle(
-                                fontWeight: FontWeight.w600,
-                                fontSize: 13,
-                              ),
-                            ),
-
-                            const SizedBox(height: 2),
-
-                            Text(
-                              filteredCoffees[index].subtitle,
-                              style: TextStyle(
-                                fontSize: 12,
-                                color: Colors.grey,
-                              ),
-                            ),
-
-                            const SizedBox(height: 5),
-
-                            Row(
-                              children: [
-                                Text(
-                                  "${filteredCoffees[index].price.toStringAsFixed(2)} \$",
-                                  style: TextStyle(fontWeight: FontWeight.bold),
+                              Text(
+                                filteredCoffees[index].name,
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 13,
                                 ),
-                                const SizedBox(width: 12),
-                                Container(
-                                  height: 34,
-                                  width: 34,
-                                  decoration: BoxDecoration(
-                                    color: Color(0xffC67C4E),
-                                    borderRadius: BorderRadius.circular(12),
-                                  ),
-                                  child: const Icon(
-                                    Icons.add,
-                                    color: Colors.white,
-                                    size: 20,
-                                  ),
+                              ),
+
+                              const SizedBox(height: 2),
+
+                              Text(
+                                filteredCoffees[index].subtitle,
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  color: Colors.grey,
                                 ),
-                              ],
-                            ),
-                          ],
+                              ),
+
+                              const SizedBox(height: 5),
+
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+
+                                children: [
+                                  Text(
+                                    "${filteredCoffees[index].price.toStringAsFixed(2)} \$",
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  const SizedBox(width: 12),
+                                  Container(
+                                    height: 34,
+                                    width: 34,
+                                    decoration: BoxDecoration(
+                                      color: Color(0xffC67C4E),
+                                      borderRadius: BorderRadius.circular(12),
+                                    ),
+                                    child: const Icon(
+                                      Icons.add,
+                                      color: Colors.white,
+                                      size: 20,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
                         ),
                       );
                     },

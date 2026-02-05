@@ -1,4 +1,3 @@
-import 'package:coffee_shop_app/screens/home/home_screen.dart';
 import 'package:coffee_shop_app/screens/onboarding/onboarding_screen.dart';
 import 'package:flutter/material.dart';
 
